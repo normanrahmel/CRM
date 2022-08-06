@@ -1,0 +1,82 @@
+mat-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* replaced by global class .add-btn*/
+.add-user-btn {
+    position: absolute;
+    right: 56px;
+    bottom: 56px;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    tr {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        &:first-child {
+            cursor: unset;
+            &:hover {
+                background-color: unset;
+            }
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+
+        cursor: pointer;
+
+        td {
+            height: 48px;
+
+            &:first-child {
+                padding-left: 16px;
+            }
+        }
+
+        th {
+            &:first-child {
+                padding-left: 16px;
+            }
+        }
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.04);
+        }
+    }
+
+    th {
+        color: rgba(0, 0, 0, 0.4);
+        font-size: 14px;
+        font-weight: 500;
+        text-align: start;
+    }
+}
+
+@media (max-width: 600px) {
+    .user-table tr td {
+        font-size: 12px;
+        &:last-child {
+            display: none;
+        }
+    }
+
+    .user-table tr th {
+        font-size: 12px;
+        &:last-child {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .user-table tr td {
+        font-size: 10px;
+    }
+
+    .user-table tr th {
+        font-size: 10px;
+    }
+}

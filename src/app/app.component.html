@@ -3,31 +3,30 @@
     <div class="logo-container"><p>Platz für Logo</p></div>
 
     <ul class="menu-items">
-      <!-- <li routerLink="/" routerLinkActive="router-link-active">
-          <mat-icon>fact_check</mat-icon>Dashboard
-          *ngIf="!(this.auth.user | async)"
-        </li> -->
-      <li routerLink="/user" routerLinkActive="router-link-active">
+      <li routerLink="User" routerLinkActive="router-link-active">
         <mat-icon>perm_identity</mat-icon>User
       </li>
-      <li routerLink="/organisation" routerLinkActive="router-link-active">
+      <li routerLink="Organisation" routerLinkActive="router-link-active">
         <mat-icon>account_tree</mat-icon>Organisation
       </li>
-      <li routerLink="/login" routerLinkActive="router-link-active">
+      <li routerLink="Login" routerLinkActive="router-link-active">
         <mat-icon>login</mat-icon>Login
       </li>
     </ul>
   </mat-drawer>
 
-  <div class="example-sidenav-content">
+  <div class="main-container">
     <mat-toolbar color="primary">
       <mat-toolbar-row>
         <mat-icon (click)="drawer.toggle()" class="example-icon menu-icon"
           >menu</mat-icon
         >
-
         <span>CRM</span>
       </mat-toolbar-row>
     </mat-toolbar>
+
+    <div class="router-container">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </mat-drawer-container>

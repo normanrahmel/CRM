@@ -20,12 +20,15 @@ mat-toolbar {
     min-height: 56px;
     height: 56px;
 }
+
+.sidenav {
+        width: fit-content;
 */
 /*NEW*/
 .mat-drawer-container {
     height: 100vh;
     .sidenav {
-        width: fit-content;
+        width: 300px;
         @media (max-width: 850px) {
             width: 200px;
         }

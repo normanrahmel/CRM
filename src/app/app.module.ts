@@ -15,14 +15,42 @@ import { StartComponent } from './start/start.component';
 import { OrganisationDetailComponent } from './organisation-detail/organisation-detail.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { FooterComponent } from './footer/footer.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { DataProtectionComponent } from './data-protection/data-protection.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogAddUserComponent } from './dialog-add-user/dialog-add-user.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, UserComponent, OrganisationComponent, LoginComponent, UserDetailComponent, StartComponent, OrganisationDetailComponent, ImprintComponent, FooterComponent, DataProtectionComponent],
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    UserComponent,
+    OrganisationComponent,
+    LoginComponent,
+    UserDetailComponent,
+    StartComponent,
+    OrganisationDetailComponent,
+    ImprintComponent,
+    FooterComponent,
+    DataProtectionComponent,
+    DialogAddUserComponent,
+  ],
   imports: [
+    MatTooltipModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
     BrowserModule,
     MatIconModule,
     MatToolbarModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatButtonModule,
     MatSidenavModule,
     AppRoutingModule,
     BrowserAnimationsModule,
