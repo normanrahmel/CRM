@@ -1,3 +1,6 @@
+#Simple-CRM
+A web app created with Angular. You can use it to create new customers, create tasks for your team and store client data in the Firebase database.
+
 # SimpleCRM
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
