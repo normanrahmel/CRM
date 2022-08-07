@@ -32,6 +32,8 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,8 +54,10 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     MatInputModule,
     MatFormFieldModule,
     MatNativeDateModule,
+    MatCardModule,
     BrowserModule,
     MatIconModule,
+    MatProgressBarModule,
     MatToolbarModule,
     MatDialogModule,
     MatDatepickerModule,
