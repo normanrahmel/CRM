@@ -19,4 +19,14 @@ export class User {
         //Es wird gefragt ob das obj existiert wenn ja dann kommt obj.city rein und wenn nicht dann kommt der leere '' rein.
     */
   }
+  public toJSON() {
+    return {
+      firtstName: this.firtstName,
+      lastName: this.lastName,
+      birthDate: this.birthDate,
+      street: this.street,
+      zipCode: this.zipCode,
+      city: this.city,
+    };
+  }
 }
