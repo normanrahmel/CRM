@@ -1,1 +1,53 @@
-<p>user-detail works!</p>
+<mat-card class="user-detail-header">
+  <button mat-icon-button class="pin-right-upper-corner">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+
+  <mat-menu>
+    <button mat-menu-item>Edit</button>
+  </mat-menu>
+
+  <img src="./assets/img/profile.png" />
+  <div class="user-details">
+    <h2>{{ user.firtstName }} {{ user.lastName }}</h2>
+    {{ user.email }}
+  </div>
+</mat-card>
+
+<mat-card class="mt-32">
+  <button mat-icon-button class="pin-right-upper-corner">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+
+  <mat-menu>
+    <button mat-menu-item>Edit</button>
+  </mat-menu>
+
+  <mat-card-title>Address</mat-card-title>
+
+  <mat-card-content *ngIf="!user.street">
+    No address registered
+  </mat-card-content>
+  <mat-card-content *ngIf="user.street">
+    {{ user.street }}<br />
+    {{ user.zipCode }} {{ user.city }}
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <button mat-icon-button class="pin-right-upper-corner">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+
+  <mat-menu>
+    <button mat-menu-item>Edit</button>
+  </mat-menu>
+
+  <mat-card-title>To-dos</mat-card-title>
+
+  <mat-card-content>
+    <mat-checkbox> </mat-checkbox>
+  </mat-card-content>
+
+  <mat-card-content> User has no to-dos </mat-card-content>
+</mat-card>

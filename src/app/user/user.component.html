@@ -2,18 +2,20 @@
   <table class="user-table">
     <tr class="color-text">
       <th>Name</th>
-      <th>E-Mail</th>
       <th>City</th>
+      <th>E-Mail</th>
     </tr>
 
-     <tr *ngIf="allUsers.length == 0">
+    <tr *ngIf="allUsers.length == 0">
       <label for="name">Name</label>
       <input name="name" type="text" />
-    </tr> 
+    </tr>
     <tr
-      *ngFor="let user of allUsers">
-       <td>{{ user.firstName }} {{ user.lastName }}</td> 
-     
+      *ngFor="let user of allUsers"
+      [routerLink]="['/user/' + user.customIdName]"
+    >
+      <td>{{ user.firstName }} {{ user.lastName }}</td>
+
       <td>{{ user.city }}</td>
       <td>{{ user.email }}</td>
     </tr>

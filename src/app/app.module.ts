@@ -34,6 +34,8 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +54,9 @@ import { MatCardModule } from '@angular/material/card';
   imports: [
     MatTooltipModule,
     MatInputModule,
+    MatMenuModule,
     MatFormFieldModule,
+    MatCheckboxModule,
     MatNativeDateModule,
     MatCardModule,
     BrowserModule,
