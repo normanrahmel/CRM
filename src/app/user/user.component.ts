@@ -10,8 +10,8 @@ import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.compo
   styleUrls: ['./user.component.scss'],
 })
 export class UserComponent implements OnInit {
-  user: User = new User();
-  allUsers = [];
+  user = new User();
+  allUsers: any = [];
   constructor(public dialog: MatDialog, private firestore: AngularFirestore) {}
 
   ngOnInit(): void {

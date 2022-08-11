@@ -14,6 +14,7 @@ mat-card {
     width: 100%;
     border-collapse: collapse;
     tr {
+        color: white;
         border-bottom: 1px solid rgba(0, 0, 0, 0.4);
         &:first-child {
             cursor: unset;
@@ -29,6 +30,7 @@ mat-card {
         cursor: pointer;
 
         td {
+            color: white;
             height: 48px;
 
             &:first-child {
@@ -37,6 +39,7 @@ mat-card {
         }
 
         th {
+            color: white;
             &:first-child {
                 padding-left: 16px;
             }
