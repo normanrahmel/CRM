@@ -1,10 +1,14 @@
 <mat-card class="user-detail-header">
-  <button mat-icon-button class="pin-right-upper-corner">
+  <button
+    mat-icon-button
+    class="pin-right-upper-corner"
+    [matMenuTriggerFor]="Usermenu"
+  >
     <mat-icon>more_vert</mat-icon>
   </button>
 
-  <mat-menu>
-    <button mat-menu-item>Edit</button>
+  <mat-menu #Usermenu="matMenu">
+    <button (click)="editUserDetail()" mat-menu-item>Edit</button>
   </mat-menu>
 
   <img src="./assets/img/profile.png" />
@@ -15,12 +19,16 @@
 </mat-card>
 
 <mat-card class="mt-32">
-  <button mat-icon-button class="pin-right-upper-corner">
+  <button
+    mat-icon-button
+    class="pin-right-upper-corner"
+    [matMenuTriggerFor]="adressMenu"
+  >
     <mat-icon>more_vert</mat-icon>
   </button>
 
-  <mat-menu>
-    <button mat-menu-item>Edit</button>
+  <mat-menu #adressMenu="matMenu">
+    <button (click)="editMenu()" mat-menu-item>Edit</button>
   </mat-menu>
 
   <mat-card-title>Address</mat-card-title>
@@ -35,12 +43,16 @@
 </mat-card>
 
 <mat-card>
-  <button mat-icon-button class="pin-right-upper-corner">
+  <button
+    mat-icon-button
+    class="pin-right-upper-corner"
+    [matMenuTriggerFor]="todomenu"
+  >
     <mat-icon>more_vert</mat-icon>
   </button>
 
-  <mat-menu>
-    <button mat-menu-item>Edit</button>
+  <mat-menu #todomenu="matMenu">
+    <button (click)="editUserTodo()" mat-menu-item>Edit</button>
   </mat-menu>
 
   <mat-card-title>To-dos</mat-card-title>

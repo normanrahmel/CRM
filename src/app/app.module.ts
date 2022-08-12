@@ -36,6 +36,9 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { DialogEditAdressComponent } from './dialog-edit-adress/dialog-edit-adress.component';
+import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
+import { DialogEditTodosComponent } from './dialog-edit-todos/dialog-edit-todos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +53,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     FooterComponent,
     DataProtectionComponent,
     DialogAddUserComponent,
+    DialogEditAdressComponent,
+    DialogEditUserComponent,
+    DialogEditTodosComponent,
   ],
   imports: [
     MatTooltipModule,

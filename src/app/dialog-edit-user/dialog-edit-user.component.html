@@ -1,0 +1,65 @@
+<div class="dialog-container">
+  <!--Progress Bar-->
+  <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+
+  <h1 mat-dialog-title>Add User</h1>
+  <div mat-dialog-content>
+    <div class="container-inputs">
+      <!--First Name-->
+      <mat-form-field class="mr-16" appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input
+          [disabled]="loading"
+          [(ngModel)]="user.firtstName"
+          matInput
+          placeholder="First Name"
+        />
+      </mat-form-field>
+      <!--Last Name-->
+      <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input
+          [disabled]="loading"
+          [(ngModel)]="user.lastName"
+          matInput
+          placeholder="Last Name"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+
+  <!--E-Mail-->
+  <div class="container-inputs">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>E-Mail</mat-label>
+      <input
+        [disabled]="loading"
+        [(ngModel)]="user.email"
+        matInput
+        placeholder="E-Mail"
+      />
+    </mat-form-field>
+  </div>
+
+  <!--Birth Date -->
+  <div class="container-inputs">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Birth Date</mat-label>
+      <input
+        [disabled]="loading"
+        matInput
+        [(ngModel)]="brithDate"
+        [matDatepicker]="picker"
+        matInput
+        placeholder="Brithdate"
+      />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <div mat-dialog-actions>
+    <button (click)="dialogRef.close()" mat-button>Cancel</button>
+    <button (click)="saveUser()" mat-button cdkFocusInitial>Save</button>
+  </div>
+</div>
