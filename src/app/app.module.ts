@@ -39,6 +39,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { DialogEditAdressComponent } from './dialog-edit-adress/dialog-edit-adress.component';
 import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
 import { DialogEditTodosComponent } from './dialog-edit-todos/dialog-edit-todos.component';
+import { HelpComponent } from './help/help.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +57,7 @@ import { DialogEditTodosComponent } from './dialog-edit-todos/dialog-edit-todos.
     DialogEditAdressComponent,
     DialogEditUserComponent,
     DialogEditTodosComponent,
+    HelpComponent,
   ],
   imports: [
     MatTooltipModule,

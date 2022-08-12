@@ -14,3 +14,17 @@ body {
 .full-width {
     width: 100%;
 }
+.container-inputs {
+    display: flex;
+    flex-direction: row;
+}
+.dialog-container {
+    position: relative;
+    mat-progress-bar {
+        position: absolute;
+        left: -24px;
+        right: -24px;
+        top: -24px;
+        width: calc(100% + 48px);
+    }
+}
