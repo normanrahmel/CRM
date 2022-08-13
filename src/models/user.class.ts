@@ -6,6 +6,7 @@ export class User {
   zipCode: number;
   city: string;
   email: string;
+  todos!: [];
 
   constructor(obj?: any) {
     this.firtstName = obj ? obj.firtstName : '';
@@ -15,6 +16,7 @@ export class User {
     this.street = obj ? obj.street : '';
     this.zipCode = obj ? obj.zipCode : '';
     this.city = obj ? obj.city : '';
+    this.todos = obj ? obj.todos : [];
 
     //Erklärung schnell Schreibweise
     /* obj ? obj.city : ''; Die Schreibweise ist eine schnelle If/Else abfrage.
@@ -30,6 +32,7 @@ export class User {
       zipCode: this.zipCode,
       city: this.city,
       email: this.email,
+      todos: this.todos,
     };
   }
 }

@@ -59,8 +59,12 @@
   <mat-card-title>To-dos</mat-card-title>
 
   <mat-card-content>
-    <mat-checkbox> </mat-checkbox>
-  </mat-card-content>
+    <mat-selection-list #todos>
+      <mat-list-option *ngFor="let todo of userTodos">
+        {{ todo }}
+      </mat-list-option>
+    </mat-selection-list>
 
-  <mat-card-content> User has no to-dos </mat-card-content>
+    <p>Finished: {{ todos.selectedOptions.selected.length }}</p>
+  </mat-card-content>
 </mat-card>

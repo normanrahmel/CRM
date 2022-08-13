@@ -16,7 +16,7 @@ export class UserDetailComponent implements OnInit {
   userId: any = '';
   user: User = new User();
   organisationTodos = [];
-  userTodos = [];
+  userTodos: any = ['test'];
 
   constructor(
     private route: ActivatedRoute,

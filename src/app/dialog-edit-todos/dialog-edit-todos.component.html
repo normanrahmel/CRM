@@ -1,1 +1,21 @@
-<p>dialog-edit-todos works!</p>
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Add a Todo</mat-label>
+    <textarea
+      rows="4"
+      cols="50"
+      matInput
+      #message
+      #editTodo
+      maxlength="256"
+      placeholder="Todo"
+      id="editTodo"
+    ></textarea>
+
+    <mat-hint align="end">{{ message.value.length }} / 256</mat-hint>
+  </mat-form-field>
+  <button (click)="addTodo()" color="primary" mat-raised-button>
+    <!-- addTodo(editTodo.value) -->
+    Add Todo
+  </button>
+</form>

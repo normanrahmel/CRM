@@ -3,6 +3,7 @@
   <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
 
   <h1 mat-dialog-title>Add User</h1>
+
   <div mat-dialog-content>
     <div class="container-inputs">
       <!--First Name-->
@@ -37,6 +38,7 @@
         [(ngModel)]="user.email"
         matInput
         placeholder="E-Mail"
+        type="email"
       />
     </mat-form-field>
   </div>

@@ -1,0 +1,15 @@
+:host {
+    padding: var(--size-m);
+}
+h2 {
+    margin: 8px 0 0 0;
+}
+
+.mat-list-item.mat-list-item-word-wrap {
+    height: initial;
+
+    .mat-line {
+        word-wrap: break-word;
+        white-space: pre-wrap;
+    }
+}

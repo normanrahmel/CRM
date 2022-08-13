@@ -40,6 +40,7 @@ import { DialogEditAdressComponent } from './dialog-edit-adress/dialog-edit-adre
 import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
 import { DialogEditTodosComponent } from './dialog-edit-todos/dialog-edit-todos.component';
 import { HelpComponent } from './help/help.component';
+import { MatListModule } from '@angular/material/list';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,6 +65,7 @@ import { HelpComponent } from './help/help.component';
     MatInputModule,
     MatMenuModule,
     MatFormFieldModule,
+    MatListModule,
     MatCheckboxModule,
     MatNativeDateModule,
     MatCardModule,
