@@ -18,7 +18,7 @@ export class UserDetailComponent implements OnInit {
   userId: any = '';
   user: User = new User();
   organisationTodos = [];
-  userTodos: any = ['test'];
+  userTodos: any = ['test', 'test', 'test'];
   loading = false;
 
   constructor(
@@ -66,7 +66,11 @@ export class UserDetailComponent implements OnInit {
     //dialog.componentInstance.userId = this.userId;
   }
 
-  deleteAllTodos() {}
+  deleteAllTodos() {
+    while (this.userTodos.length > 0) {
+      this.userTodos.pop();
+    }
+  }
 
   async deleteUser() {
     this.loading = true;

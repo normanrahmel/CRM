@@ -6,7 +6,7 @@ export class User {
   zipCode: number;
   city: string;
   email: string;
-  todos!: [];
+  todos!: ['TEST'];
 
   constructor(obj?: any) {
     this.firtstName = obj ? obj.firtstName : '';
