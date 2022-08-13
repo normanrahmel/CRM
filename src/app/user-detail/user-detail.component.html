@@ -9,6 +9,7 @@
 
   <mat-menu #Usermenu="matMenu">
     <button (click)="editUserDetail()" mat-menu-item>Edit</button>
+    <button (click)="deleteUser()" mat-menu-item>Delete</button>
   </mat-menu>
 
   <img src="./assets/img/profile.png" />
@@ -53,7 +54,8 @@
   </button>
 
   <mat-menu #todomenu="matMenu">
-    <button (click)="editUserTodo()" mat-menu-item>Edit</button>
+    <button (click)="editUserTodo()" mat-menu-item>Add a Todo</button>
+    <button (click)="deleteAllTodos()" mat-menu-item>Delete Todos</button>
   </mat-menu>
 
   <mat-card-title>To-dos</mat-card-title>

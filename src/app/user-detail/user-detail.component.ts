@@ -6,6 +6,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogEditAdressComponent } from '../dialog-edit-adress/dialog-edit-adress.component';
 import { DialogEditUserComponent } from '../dialog-edit-user/dialog-edit-user.component';
 import { DialogEditTodosComponent } from '../dialog-edit-todos/dialog-edit-todos.component';
+import { deleteDoc } from '@angular/fire/firestore/firebase';
+import { doc } from 'firebase/firestore';
 
 @Component({
   selector: 'app-user-detail',
@@ -17,6 +19,7 @@ export class UserDetailComponent implements OnInit {
   user: User = new User();
   organisationTodos = [];
   userTodos: any = ['test'];
+  loading = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -61,5 +64,14 @@ export class UserDetailComponent implements OnInit {
     const dialog = this.dialog.open(DialogEditTodosComponent);
     //dialog.componentInstance.user = new User(this.user.toJSON());
     //dialog.componentInstance.userId = this.userId;
+  }
+
+  deleteAllTodos() {}
+
+  async deleteUser() {
+    this.loading = true;
+    await this.firestore.collection('users').doc(this.userId).delete();
+    this.loading = false;
+    window.location.href = '/User';
   }
 }
