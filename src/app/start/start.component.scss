@@ -1,0 +1,32 @@
+.start-img {
+    height: 400px;
+    width: 400px;
+}
+.pos-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.font-size {
+    font-size: 30px;
+}
+.font-size-small {
+    font-size: 15px;
+    padding-top: 15px;
+}
+@media (max-width: 720px) {
+    .start-img {
+        height: 200px;
+        width: 200px;
+    }
+    .font-size {
+        font-size: 20px;
+        word-wrap: break-word;
+    }
+    .font-size-small {
+        font-size: 10px;
+        font-size: 20px;
+        word-wrap: break-word;
+        padding-top: 15px;
+    }
+}

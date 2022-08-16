@@ -39,6 +39,7 @@ import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.com
 import { DialogEditTodosComponent } from './dialog-edit-todos/dialog-edit-todos.component';
 import { HelpComponent } from './help/help.component';
 import { MatListModule } from '@angular/material/list';
+import { RouterTestingModule } from '@angular/router/testing';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +57,7 @@ import { MatListModule } from '@angular/material/list';
   imports: [
     MatTooltipModule,
     MatInputModule,
+    RouterTestingModule,
     MatMenuModule,
     MatFormFieldModule,
     MatListModule,

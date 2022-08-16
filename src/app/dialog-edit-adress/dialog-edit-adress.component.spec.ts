@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatDialogRef } from '@angular/material/dialog';
 
 import { DialogEditAdressComponent } from './dialog-edit-adress.component';
 
@@ -8,9 +9,9 @@ describe('DialogEditAdressComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DialogEditAdressComponent ]
-    })
-    .compileComponents();
+      declarations: [DialogEditAdressComponent],
+      imports: [MatDialogRef],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(DialogEditAdressComponent);
     component = fixture.componentInstance;
