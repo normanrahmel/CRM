@@ -62,7 +62,7 @@
 
   <mat-card-content>
     <mat-selection-list #todos>
-      <mat-list-option *ngFor="let todo of userTodos">
+      <mat-list-option *ngFor="let todo of this.MasterService.userTodos">
         {{ todo }}
       </mat-list-option>
     </mat-selection-list>
