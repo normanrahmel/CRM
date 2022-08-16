@@ -9,7 +9,6 @@ import { DialogEditTodosComponent } from '../dialog-edit-todos/dialog-edit-todos
 import { deleteDoc } from '@angular/fire/firestore/firebase';
 import { doc } from 'firebase/firestore';
 import { onLog } from '@angular/fire/app';
-import { MasterService } from '../master.service';
 
 @Component({
   selector: 'app-user-detail',
@@ -26,8 +25,7 @@ export class UserDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private firestore: AngularFirestore,
-    public dialog: MatDialog,
-    public MasterService: MasterService
+    public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -65,13 +63,13 @@ export class UserDetailComponent implements OnInit {
 
   editUserTodo() {
     const dialog = this.dialog.open(DialogEditTodosComponent);
-    //dialog.componentInstance.user = new User(this.user.toJSON());
-    //dialog.componentInstance.userId = this.userId;
+    dialog.componentInstance.user = new User(this.user.toJSON());
+    dialog.componentInstance.userId = this.userId;
   }
 
   deleteAllTodos() {
-    while (this.MasterService.userTodos.length > 0) {
-      this.MasterService.userTodos.pop();
+    while (this.user.todos.length > 0) {
+      this.user.todos.pop();
     }
   }
 

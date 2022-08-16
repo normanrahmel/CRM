@@ -16,7 +16,7 @@
   <div class="user-details">
     <h2>{{ user.firtstName }} {{ user.lastName }}</h2>
     {{ user.email }} <br />
-    {{ user.birthDate }}
+    {{ user.birthDate | date: "dd/MM/yyyy" }}
   </div>
 </mat-card>
 
@@ -62,7 +62,7 @@
 
   <mat-card-content>
     <mat-selection-list #todos>
-      <mat-list-option *ngFor="let todo of this.MasterService.userTodos">
+      <mat-list-option *ngFor="let todo of this.user.todos">
         {{ todo }}
       </mat-list-option>
     </mat-selection-list>
